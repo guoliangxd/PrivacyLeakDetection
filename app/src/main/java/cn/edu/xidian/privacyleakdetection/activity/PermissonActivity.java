@@ -15,6 +15,11 @@ import java.util.List;
 import cn.edu.xidian.privacyleakdetection.R;
 import cn.edu.xidian.privacyleakdetection.adapter.AppPermissionAdapter;
 import cn.edu.xidian.privacyleakdetection.model.AppPermission;
+import cn.edu.xidian.privacyleakdetection.utils.PermissionGroup;
+
+/*
+权限分析页面
+ */
 
 public class PermissonActivity extends AppCompatActivity {
 
@@ -51,14 +56,16 @@ public class PermissonActivity extends AppCompatActivity {
             if(null != pi.requestedPermissions){
                 ap.setTotalPermission(pi.requestedPermissions.length);
                 //ap.setPermission(pi.requestedPermissions);
+                ap.setPrivacyPermission(PermissionGroup.queryDangersPermission(pi.requestedPermissions));
            }
             else
             {
                 //ap.setPermission(new String[]{"kong"});
                 ap.setTotalPermission(0);
+                ap.setPrivacyPermission(ap.getTotalPermission());
             }
 
-            ap.setPrivacyPermission(ap.getTotalPermission());
+
 
            // Log.d(TAG, "获得到的权限列表为："+ap.getPermission()[0]);
             appList.add(ap);

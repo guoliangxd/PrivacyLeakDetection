@@ -15,24 +15,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="权限分析"
+        android:textSize="20sp"
         android:layout_weight="6"
-        android:background="#18E6EC"/>
+        android:background="#DC3A28"/>
 
     <Button
         android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="数据分析"
+        android:textSize="20sp"
         android:layout_weight="6"
-        android:background="#D118EC"/>
+        android:background="#50EC1B"/>
 
     <Button
         android:id="@+id/comprehensive"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="综合分析"
+        android:textSize="20sp"
         android:layout_weight="6"
-        android:background="#F70B19"/>
+        android:background="#0E50A3"/>
 
     <!--TextView
         android:layout_width="wrap_content"
