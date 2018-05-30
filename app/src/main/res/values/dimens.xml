@@ -2,7 +2,29 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
-    <dimen name="nav_header_height">176dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="main_activity_fab_margin">16dp</dimen>
+    <dimen name="main_activity_fab_spacing">10dp</dimen>
+
+    <!-- (main_activity_fab_margin - main_activity_fab_spacing)/2 -->
+    <dimen name="main_activity_fab_spacing_half">3dp</dimen>
+
+    <dimen name="data_leak_margin">8dp</dimen>
+
+    <dimen name="android_plot_legend_text_height">20dp</dimen>
+    <dimen name="android_plot_legend_text_width">70dp</dimen>
+    <dimen name="android_plot_legend_text_width_large">80dp</dimen>
+    <dimen name="android_plot_legend_logo_height">10dp</dimen>
+
+    <dimen name="android_plot_legend_spacing">10dp</dimen>
+    <dimen name="android_plot_legend_large_height">20dp</dimen>
+    <dimen name="android_plot_legend_medium_height">15dp</dimen>
+    <dimen name="android_plot_legend_large_width">95dp</dimen>
+    <dimen name="android_plot_legend_percentage_width">40dp</dimen>
+    <dimen name="android_plot_legend_large_text">16sp</dimen>
+    <dimen name="android_plot_legend_padding">2dp</dimen>
+
+    <dimen name="query_tab_text_size">18sp</dimen>
+    <integer name="data_leak_left_column_weight">2</integer>
+    <integer name="data_leak_right_column_weight">5</integer>
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="@string/pref_leak_display_order_key"
+        android:title="@string/pref_leak_display_order_title"
+        android:summary="@string/pref_leak_display_order_summary"
+        android:dialogTitle="@string/pref_leak_display_order_dialog_title"
+        android:entries="@array/pref_leak_display_entries"
+        android:entryValues="@array/pref_leak_display_values"
+        android:defaultValue="1"/>
+
+    <ListPreference
+        android:key="@string/pref_graph_domain_size_key"
+        android:title="@string/pref_graph_domain_size_title"
+        android:summary="@string/pref_graph_domain_size_summary"
+        android:dialogTitle="@string/pref_graph_domain_size_title"
+        android:entries="@array/pref_graph_domain_size_entries"
+        android:entryValues="@array/pref_graph_domain_size_values"
+        android:defaultValue="20"/>
+</PreferenceScreen>

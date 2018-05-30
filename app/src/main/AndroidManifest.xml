@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.edu.xidian.privacyleakdetection">
+    package="cn.edu.xidian.privacyleakdetection"
+    android:versionCode="1"
+    android:versionName="v1">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- End of copy. -->
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme = "@style/AppTheme"
+        android:name="cn.edu.xidian.privacyleakdetection.Application.PrivacyLeakDetection"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
-            android:name=".activity.MainActivity"
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,10 +48,68 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.PermissonActivity"
-            android:label="Permission Analysis"/>
-        <activity android:name=".activity.DataActivity" />
-        <activity android:name=".activity.ComprehensiveActivity"></activity>
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.AppSummaryActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.edu.xidian.privacyleakdetection.Application.Activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.DetailActivity"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.AppSummaryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.LocationDetailActivity"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.AppSummaryActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.MyPreferencesActivity"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.AppDataActivity"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.AppSummaryActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Activities.AllAppsDataActivity"
+            android:parentActivityName="cn.edu.xidian.privacyleakdetection.Application.Activities.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name="cn.edu.xidian.privacyleakdetection.Application.ActionReceiver"/>
+
+        <service
+            android:name="cn.edu.xidian.privacyleakdetection.Application.Network.FakeVPN.FakeVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.edu.xidian.privacyleakdetection.Application.Database.RecordAppStatusEvents" >
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>

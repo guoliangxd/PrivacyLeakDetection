@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">隐私泄露检测</string>
+
+    <!-- Main Activity -->
+    <string name="connect">开始隐私泄露检测</string>
+    <string name="connected">已开始隐私泄露检测</string>
+    <string name="disconnect">断开连接</string>
+    <string name="not_show_in_future">不再通知该泄露</string>
+    <string name="not_notify_in_future">不再通知此类泄露</string>
+    <string name="mainActivity_warn_dialog_title">警告</string>
+    <string name="mainActivity_warn_dialog_msg">无法开始隐私泄露检测</string>
+    <string name="data_leakage_frequency">本月数据泄露频率</string>
+    <string name="title_activity_location">地图</string>
+    <string name="starting_vpn_message">打开</string>
+    <string name="vpn_running_broadcast_intent">cn.edu.xidian.privacyleakdetection.VpnRunning</string>
+    <string name="update_filter_keywords_title">更新过滤关键词</string>
+    <string name="update_filter_keywords_message">在接下来的对话框中，选择包含需要过滤的关键词的文件</string>
+    <string name="export_data_title">导出数据</string>
+    <string name="export_data_message">确定要导出数据吗？ 这将会把数据库所有的表导出到 CSV 文件(每个表都会导出到一个单独的文件).</string>
+    <string name="vpn_on">开</string>
+    <string name="vpn_off">关</string>
+    <string name="leak_singular">泄露</string>
+    <string name="leak_plural">泄露</string>
+    <string name="settings">设置</string>
+    <string name="permissions_not_granted_message">为了使用隐私泄露检测, 你需要同意其申请的所有权限.</string>
+    <string name="delete_package_title">删除应用数据</string>
+    <string name="delete_package_message">确定要删除隐私泄露检测记录的所有数据吗 %s? 此操作无法撤销.</string>
+    <string name="category_ignored">无通知</string>
+
+    <!-- Preferences -->
+    <string name="pref_leak_display_order_key">pref_leak_display_order</string>
+    <string name="pref_leak_display_order_title">泄露显示规则</string>
+    <string name="pref_leak_display_order_summary">显示应用程序泄露的规则</string>
+    <string name="pref_leak_display_order_dialog_title">泄露规则：</string>
+
+    <string name="pref_graph_domain_size_key">pref_graph_domain_size</string>
+    <string name="pref_graph_domain_size_title">图域的大小</string>
+    <string name="pref_graph_domain_size_summary">泄漏报告图域的大小。</string>
+    <string name="pref_graph_domain_size_dialog_title">域的大小:</string>
+
+    <string name="export_data">导出数据</string>
+    <string name="update_filter_keywords">更新过滤器关键词</string>
+
+    <!-- App Data Activity -->
+    <string name="usage_stats_permission_not_granted_message">为了使用隐私泄露检测，你需要允许它请求的权限。</string>
+    <string name="turn_on_permission_button">打开</string>
+    <string name="invalid_android_version_message" formatted="false">你当前的Android版本是： %d.\n为了使用这一特性，你最低需要的版本是： %d </string>
+
+    <!-- DataLeak -->
+    <string name="type_label">类型</string>
+    <string name="time_label">时间</string>
+    <string name="content_label">内容</string>
+    <string name="destination_label">目标</string>
+
+    <string name="application_label_colon">应用：</string>
+    <string name="category_label_colon">分类：</string>
+    <string name="type_label_colon">类型：</string>
+    <string name="destination_label_colon">目标：</string>
+    <string name="time_label_colon">时间：</string>
+    <string name="content_label_colon">内容：</string>
+    <string name="status_label_colon">状态：</string>
+
+    <!-- Leak Categories -->
+    <string name="location_category">位置</string>
+    <string name="contact_category">通讯录</string>
+    <string name="device_category">设备</string>
+    <string name="keyword_category">关键词</string>
+
+    <!-- Android Plot Display -->
+    <string name="dialog_accept">确认</string>
+    <string name="app_status_foreground">前台</string>
+    <string name="app_status_background">后台</string>
+    <string name="app_status_no_data">无数据</string>
+    <string name="app_data_info">信息</string>
+    <string name="leak_report_title">泄露报告</string>
+    <string name="leak_summary_title">泄露汇总</string>
+    <string name="leak_query_title">泄露查询</string>
+    <string name="report_message_single_app">这张图表显示了你的应用程序在什么时候泄露，而不是在前台或后台。使用导航箭头在时间上向前和向后移动。</string>
+    <string name="summary_message_single_app">对所有应用程序按类别和前台状态的总结</string>
+    <string name="query_message_single_app">按需求设置参数，以检测你的哪些应用在何时泄露信息。</string>
+    <string name="report_message_all_apps">这张图表显示了你的应用何时再泄露信息。使用导航箭头在时间上向前和向后移动。</string>
+    <string name="summary_message_all_apps">对所有应用程序按类别和前台状态的总结</string>
+    <string name="query_message_all_apps">按需求设置参数，以检测你的哪些应用在何时泄露信息。</string>
+    <string name="traffic_title">流量</string>
+    <string name="traffic_message_single_app">你的应用的流量汇总。</string>
+    <string name="traffic_message_all_apps">你所有应用的流量汇总。</string>
+
+    <!-- Spinners -->
+    <string name="spinner_category">分类：</string>
+    <string name="spinner_status">状态：</string>
+    <string name="start_date">开始日期：</string>
+    <string name="end_date">结束日期：</string>
+    <string name="certificate_root_store">无法检测加密流量</string>
+    <string name="certificate_root_store_msg">为了使隐私泄露检测能检测加密数据, 它需要在你的设备上添加证书. 这需要你在系统询问证书名时输入密码，并点击确认按钮。</string>
+
+</resources>

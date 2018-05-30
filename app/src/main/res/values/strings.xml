@@ -1,8 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Privacy Leak Detection</string>
+    <string name="app_name">PrivacyLeakDetection</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Main Activity -->
+    <string name="connect">Enable PrivacyLeakDetection</string>
+    <string name="connected">PrivacyLeakDetection Enabled</string>
+    <string name="not_show_in_future">Don't notify of future leakages</string>
+    <string name="not_notify_in_future">Don't notify of future leakages of this category</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="mainActivity_warn_dialog_title">Warning</string>
+    <string name="mainActivity_warn_dialog_msg">Unable to start PrivacyLeakDetection</string>
+    <string name="data_leakage_frequency">Data leakage frequency this month:</string>
+    <string name="title_activity_location">Map</string>
+    <string name="starting_vpn_message">Starting VPN</string>
+    <string name="vpn_running_broadcast_intent">cn.edu.xidian.privacyleakdetection.VpnRunning</string>
+    <string name="update_filter_keywords_title">Update Filter Keywords</string>
+    <string name="update_filter_keywords_message">In the following dialog box, choose the file that contains all keywords that PrivacyLeakDetection should look for in the network traffic.</string>
+    <string name="export_data_title">Export Data</string>
+    <string name="export_data_message">Are you sure you want to export data? This will export all database tables into CSV files (one CSV file for each table).</string>
+    <string name="vpn_on">ON</string>
+    <string name="vpn_off">OFF</string>
+    <string name="leak_singular">leak</string>
+    <string name="leak_plural">leaks</string>
+    <string name="settings">Settings</string>
+    <string name="permissions_not_granted_message">To use PrivacyLeakDetection, you need to turn on all permissions that it requires.\n\nFor example, if PrivacyLeakDetection cannot learn your location, it cannot look for leaks of your location in traffic that is leaving your device.\n\nPrivacyLeakDetection uses the information that you grant it access to only locally and does not transmit it to remote entities.</string>
+    <string name="delete_package_title">Delete Application Data</string>
+    <string name="delete_package_message">Are you sure you want to delete all the data that PrivacyLeakDetection has recorded for %s? This action cannot be undone.</string>
+    <string name="category_ignored">no notifications</string>
 
-    <string name="action_settings">Settings</string>
+    <!-- Preferences -->
+    <string name="pref_leak_display_order_key">pref_leak_display_order</string>
+    <string name="pref_leak_display_order_title">Leak Display Order</string>
+    <string name="pref_leak_display_order_summary">The order to display application leakages.</string>
+    <string name="pref_leak_display_order_dialog_title">Order leaks:</string>
+
+    <string name="pref_graph_domain_size_key">pref_graph_domain_size</string>
+    <string name="pref_graph_domain_size_title">Graph Domain Size</string>
+    <string name="pref_graph_domain_size_summary">The size of the leak report graph domain.</string>
+    <string name="pref_graph_domain_size_dialog_title">Domain size:</string>
+
+    <string name="export_data">Export Data</string>
+    <string name="update_filter_keywords">Update Filter Keywords</string>
+
+    <!-- App Data Activity -->
+    <string name="usage_stats_permission_not_granted_message">To use PrivacyLeakDetection, you need to give it usage acccess.\n\nOtherwise, PrivacyLeakDetection cannot determine whether an app leaked your personal information while being in the foreground or while being in the background.</string>
+    <string name="turn_on_permission_button">Turn On</string>
+    <string name="invalid_android_version_message" formatted="false">Your current Android version is: %d.\nYou need at least version %d to use this feature.</string>
+
+    <!-- DataLeak -->
+    <string name="type_label">Type</string>
+    <string name="time_label">Time</string>
+    <string name="content_label">Content</string>
+    <string name="destination_label">Destination</string>
+
+    <string name="application_label_colon">Application:</string>
+    <string name="category_label_colon">Category:</string>
+    <string name="type_label_colon">Type:</string>
+    <string name="destination_label_colon">Destination:</string>
+    <string name="time_label_colon">Time:</string>
+    <string name="content_label_colon">Content:</string>
+    <string name="status_label_colon">Status:</string>
+
+    <!-- Leak Categories -->
+    <string name="location_category">Location</string>
+    <string name="contact_category">Contact</string>
+    <string name="device_category">Device</string>
+    <string name="keyword_category">Keyword</string>
+
+    <!-- Android Plot Display -->
+    <string name="dialog_accept">OK</string>
+    <string name="app_status_foreground">Foreground</string>
+    <string name="app_status_background">Background</string>
+    <string name="app_status_no_data">No Data</string>
+    <string name="app_data_info">Info</string>
+    <string name="leak_report_title">Leak Report</string>
+    <string name="leak_summary_title">Leak Summary</string>
+    <string name="leak_query_title">Leak Query</string>
+    <string name="report_message_single_app">This graph shows when your app is leaking compared to when it is in the foreground or background. Use the navigation arrows to move forward and backward in time.</string>
+    <string name="summary_message_single_app">A summary of the leaks of your app, by category and foreground status.</string>
+    <string name="query_message_single_app">Set the parameters as you wish in order to investigate when and what your app has been leaking.</string>
+    <string name="report_message_all_apps">This graph shows when your apps are leaking. Use the navigation arrows to move forward and backward in time.</string>
+    <string name="summary_message_all_apps">A summary of the leaks of all your apps, by category and foreground status.</string>
+    <string name="query_message_all_apps">Set the parameters as you wish in order to investigate when and what your apps have been leaking.</string>
+    <string name="traffic_title">Traffic</string>
+    <string name="traffic_message_single_app">A summary of the traffics of your app, by encryption and direction.</string>
+    <string name="traffic_message_all_apps">A summary of the traffics of all your apps, by encryption and direction.</string>
+
+    <!-- Spinners -->
+    <string name="spinner_category">Category:</string>
+    <string name="spinner_status">Status:</string>
+    <string name="start_date">Start Date:</string>
+    <string name="end_date">End Date:</string>
+    <string name="certificate_root_store">Cannot inspect encrypted traffic</string>
+    <string name="certificate_root_store_msg">In order for PrivacyLeakDetection to inspect encrypted traffic, it needs to add a certificate to your device\'s certificate store. This requires that you enter your device\'s PIN and click the \"OK\" button when asked to name the certificate.</string>
+
 </resources>
